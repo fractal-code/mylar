@@ -1,7 +1,11 @@
 # Mylar
-Mylar is a platform for building web applications that protect data confidentiality against attackers who fully compromise the servers. You can read more about Mylar here: http://css.csail.mit.edu/mylar/
+Mylar is a platform that is unique in it's ability to offer web applications security & data confidentiality even in situations where servers are fully compromised. Mylar stores sensitive data in an encrypted format on the server and only decrypts the data in the user's browser. The concept of storing encrypted data on the server isn't new - but has always presented the obvious challenge of preventing the server from easily manipulating the data. Homomorphic encryption and functional encryption present theoretical techniques for manipulating encrypted data but are currently impractical for real-world implementation. Mylar provides a clever system for building web applications on top of encrypted data with reasonable performance overheads & minimal extra-development cost.
+
+You can read more about Mylar here: http://css.csail.mit.edu/mylar/
 
 ## mylar:platform
+
+The mylar:platform package allows you to easily (a dubious claim for now :P - with hopes of better documentation in the future!) utilise Mylar in your web applications. This project is still very young, so expect further documentation and augmentations to come in the near future.
 
 ### Installation
 **Only supports Meteor 0.9.1 and later**
@@ -74,3 +78,14 @@ To enable search in your app you should follow the instructions in the [mylar:se
 
 ### Active attacker
 To enable protection against an active adversary, you should follow the instructions in the [mylar:active-attacker package](https://github.com/gliesesoftware/mylar-active-attacker)
+
+## Publications
+
+Raluca Ada Popa, Emily Stark, Jonas Helfer, Steven Valdez, Nickolai Zeldovich, M. Frans Kaashoek, and Hari Balakrishnan.
+Building web applications on top of encrypted data using Mylar.
+To appear in NSDI'14 (11th USENIX Symposium on Networked Systems Design and Implementation).
+
+Raluca Ada Popa and Nickolai Zeldovich.
+Multi-Key Searchable Encryption. 
+Cryptology ePrint Archive, 2013/508. 
+(Mylar uses this new encryption scheme to perform search over data encrypted with different keys efficiently.)
