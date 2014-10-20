@@ -134,27 +134,27 @@
     ],
     [
       "mylar:accounts-idp",
-      "0.0.1"
+      "0.1.1"
     ],
     [
       "mylar:async",
-      "0.0.1"
+      "0.1.0"
     ],
     [
       "mylar:basic-crypto",
-      "0.0.1"
+      "0.1.0"
     ],
     [
       "mylar:meteor-changes",
-      "0.0.1"
+      "0.1.1"
     ],
     [
       "mylar:principal",
-      "0.0.1"
+      "0.1.3"
     ],
     [
       "mylar:timing",
-      "0.0.1"
+      "0.1.0"
     ],
     [
       "npm-bcrypt",
@@ -246,6 +246,6 @@
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.33",
+  "toolVersion": "meteor-tool@1.0.34",
   "format": "1.0"
 }
