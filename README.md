@@ -8,7 +8,7 @@ You can read more about Mylar here: http://css.csail.mit.edu/mylar/
 The mylar:platform package allows you to easily (a dubious claim for now :P - with hopes of better documentation in the future!) utilise Mylar in your web applications. This project is still very young, so expect further documentation and augmentations to come in the near future.
 
 ### Installation
-**Only supports Meteor 0.9.1 and later**
+**Only supports Meteor 1.0 and later**
 
 ```console
 meteor add mylar:platform
