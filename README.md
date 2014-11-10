@@ -14,8 +14,7 @@ The mylar:platform package allows you to easily (a dubious claim for now :P - wi
 meteor add mylar:platform
 ```
 
-### Usage
-
+### Usage<br>
 1. Add a reference to your collection objects by name in the MylarCol dictionary<br>
 ```javascript
 Rooms = new Mongo.Collection('rooms');
@@ -47,7 +46,7 @@ Messages._encrypted_fields({'message': {princ: 'roomprinc',
 Principal.create("room", 'work', Principal.user(), function(princ) {
 	console.log("Created principal: " + princ);
 });
-// grant the user "john" to the principal 'foo'
+// grant the user "john" access to the principal 'foo'
 Principal.lookupUser("john", function (princ) {
     Principal.add_access(princ, 'foo', function () {/* callback */});
 });
@@ -70,14 +69,18 @@ meteor mongo
 db.[collection].findOne()
 ```
 
-For each field specified as being encrypted, you should **only** see a corrresponding field postfixed with "_enc" that contains the encrypted contents. You should also see the principal under the specified field.
+For each field specified as being encrypted, you should **only** see a corresponding field postfixed with "_enc" that contains the encrypted contents. 
+
+### Example
+
+See the [mylar-encchat repo](https://github.com/gliesesoftware/mylar-encchat) for an example of using mylar to secure a simple chat application. 
 
 ### Search
 
-To enable search in your app you should follow the instructions in the [mylar:search package](https://github.com/gliesesoftware/mylar-search)
+To enable search in your app you should follow the instructions in the [mylar:search repo](https://github.com/gliesesoftware/mylar-search)
 
 ### Active attacker
-To enable protection against an active adversary, you should follow the instructions in the [mylar:active-attacker package](https://github.com/gliesesoftware/mylar-active-attacker)
+To enable protection against an active adversary, you should follow the instructions in the [mylar:active-attacker repo](https://github.com/gliesesoftware/mylar-active-attacker)
 
 ## Publications
 
@@ -87,5 +90,5 @@ To appear in NSDI'14 (11th USENIX Symposium on Networked Systems Design and Impl
 
 Raluca Ada Popa and Nickolai Zeldovich.
 Multi-Key Searchable Encryption. 
-Cryptology ePrint Archive, 2013/508. 
+Cryptology ePrint Archive, 2013/508.
 (Mylar uses this new encryption scheme to perform search over data encrypted with different keys efficiently.)
