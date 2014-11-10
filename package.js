@@ -1,7 +1,7 @@
 Package.describe({
     summary: "Standard Mylar packages",
     name: "mylar:platform",
-    version: "0.1.1",
+    version: "0.2.0",
     git: "https://github.com/gliesesoftware/mylar.git"
 });
 
