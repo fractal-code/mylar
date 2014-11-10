@@ -8,10 +8,10 @@ Package.describe({
 Package.onUse(function (api) {
     api.imply([
         // principal graph
-        'mylar:principal@0.1.3',
+        'mylar:principal@0.2.0',
         // login service for IDP accounts
-        'mylar:accounts-idp@0.1.1',
+        'mylar:accounts-idp@0.2.0',
         // meteor changes
-        'mylar:meteor-changes@0.1.1'
+        'mylar:meteor-changes@0.2.0'
     ]);
 });
