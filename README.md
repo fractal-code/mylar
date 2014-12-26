@@ -32,10 +32,10 @@ Mongo.Collection.intercept.init(Rooms);
 // encrypt the field "message" in the collection "Messages"
 // specify that the field 'roomprinc' will contain the principal
 // specify the principal as being of type 'room'
-// specify '_id' & 'foo' as auth fields, meaning they must be present
+// specify 'time', '_id' & 'message' as authentication set fields - meaning their values must be consistent with one another
 Messages._encrypted_fields({'message': {princ: 'roomprinc', 
                                            princtype: 'room', 
-                                           auth: ['_id', 'foo']}});
+                                           auth: ['timestamp', '_id', 'message']}});
 ```
 <br>
 4. Indicate desired access control. This is done in Mylar using principals, each principal corresponds to a public/private key pair and represents an application-level access control entity, such as a user, group, or shared document. Each user is automatically assigned a principal which can be accessed with Principal.user(), other principals are created using Principal.create. To give principals access to other principals you can use Principal.add_access (or remove_access to revoke access) and to find principals, use Principal.lookup or Principal.lookupUser. <br>
