@@ -15,19 +15,13 @@ meteor add mylar:platform
 ```
 
 ### Usage<br>
-1. Add a reference to your collection objects by name in the MylarCol dictionary<br>
-```javascript
-Rooms = new Mongo.Collection('rooms');
-MylarCol['rooms'] = Rooms;
-```
-<br>
-2. Initialise your collections with Mongo.Collection.intercept.init([collection])<br>
+1. Initialise your collections with Mongo.Collection.intercept.init([collection])<br>
 ```javascript
 Rooms = new Mongo.Collection('rooms');
 Mongo.Collection.intercept.init(Rooms);
 ```
 <br>
-3. Annotate which fields are sensitive and should be encrypted. <br>
+2. Annotate which fields are sensitive and should be encrypted. <br>
 ```javascript
 // encrypt the field "message" in the collection "Messages"
 // specify that the field 'roomprinc' will contain the principal
@@ -38,7 +32,7 @@ Messages._encrypted_fields({'message': {princ: 'roomprinc',
                                            auth: ['timestamp', '_id', 'message']}});
 ```
 <br>
-4. Indicate desired access control. This is done in Mylar using principals, each principal corresponds to a public/private key pair and represents an application-level access control entity, such as a user, group, or shared document. Each user is automatically assigned a principal which can be accessed with Principal.user(), other principals are created using Principal.create. To give principals access to other principals you can use Principal.add_access (or remove_access to revoke access) and to find principals, use Principal.lookup or Principal.lookupUser. <br>
+3. Indicate desired access control. This is done in Mylar using principals, each principal corresponds to a public/private key pair and represents an application-level access control entity, such as a user, group, or shared document. Each user is automatically assigned a principal which can be accessed with Principal.user(), other principals are created using Principal.create. To give principals access to other principals you can use Principal.add_access (or remove_access to revoke access) and to find principals, use Principal.lookup or Principal.lookupUser. <br>
 ```javascript
 // retrieve the current user's principal
 var currentUsersPrincipal = Principal.user()
