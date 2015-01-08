@@ -36,8 +36,8 @@ mongo@1.0.11
 mylar:accounts-idp@0.2.0
 mylar:async@0.1.0
 mylar:basic-crypto@0.1.0
-mylar:meteor-changes@0.3.0
-mylar:platform@0.3.0
+mylar:meteor-changes@0.3.1
+mylar:platform@0.3.1
 mylar:principal@0.2.0
 mylar:timing@0.1.0
 npm-bcrypt@0.7.7
