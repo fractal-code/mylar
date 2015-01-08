@@ -12,6 +12,6 @@ Package.onUse(function (api) {
         // login service for IDP accounts
         'mylar:accounts-idp@0.2.0',
         // meteor changes
-        'mylar:meteor-changes@0.3.0'
+        'mylar:meteor-changes@0.3.1'
     ]);
 });
